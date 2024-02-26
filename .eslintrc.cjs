@@ -35,6 +35,7 @@ module.exports = {
     'keyword-spacing': ['error', { 'before': true }],
     'comma-spacing': ['error', { 'before': false, 'after': true }],
     'linebreak-style': ['error', 'unix'],
+    'space-infix-ops':'error',
     quotes: ['error', 'single'],
     semi: ['error', 'always'],
     'object-curly-spacing': ['error', 'always'],
