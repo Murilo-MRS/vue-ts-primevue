@@ -10,7 +10,8 @@ module.exports = {
     '@vue/eslint-config-typescript'
   ],
   parserOptions: {
-    ecmaVersion: 'latest'
+    ecmaVersion: 'latest',
+    parser: '@typescript-eslint/parser'
   },
   rules: {
     'vue/max-attributes-per-line': ['error', {
@@ -22,6 +23,13 @@ module.exports = {
       }
     }],
     'vue/multi-word-component-names': 0,
+    '@typescript-eslint/semi': ['error', 'always'],
+    '@typescript-eslint/naming-convention': ['error',
+      {
+        selector: 'typeLike',
+        format: ['PascalCase']
+      }
+    ],
     'no-console': ['error'],
     indent: ['error', 2],
     'comma-dangle': ['error', 'never'],
@@ -34,10 +42,9 @@ module.exports = {
     ],
     'keyword-spacing': ['error', { 'before': true }],
     'comma-spacing': ['error', { 'before': false, 'after': true }],
-    'linebreak-style': ['error', 'unix'],
-    'space-infix-ops':'error',
+    'linebreak-style': ['error', (require('os').EOL === '\r\n' ? 'windows' : 'unix')],
     quotes: ['error', 'single'],
-    semi: ['error', 'always'],
+    semi: 0,
     'object-curly-spacing': ['error', 'always'],
     'array-bracket-spacing': [
       'error',
@@ -45,6 +52,7 @@ module.exports = {
       {
         'objectsInArrays': false
       }
-    ]
+    ],
+    'space-infix-ops':'error'
   }
 };

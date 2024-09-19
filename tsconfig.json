@@ -6,7 +6,9 @@
     },
     {
       "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.vitest.json"
     }
-  ],
-  "include": ["env.d.ts", "src//*", "src//.vue", "src/**/.ts"],
+  ]
 }
