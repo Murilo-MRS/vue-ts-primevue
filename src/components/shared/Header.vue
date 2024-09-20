@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="border border-black">
     <slot />
   </header>
 </template>

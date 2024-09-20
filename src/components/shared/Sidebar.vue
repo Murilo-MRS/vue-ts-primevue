@@ -1,5 +1,5 @@
 <template>
-  <aside>
+  <aside class="border border-black">
     <slot />
   </aside>
 </template>

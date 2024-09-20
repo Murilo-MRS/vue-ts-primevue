@@ -6,11 +6,17 @@
       </Header>
     </template>
     <template #content>
-      <section>
-        <Card>
-          <p>This is a card</p>
+      <section class="">
+        <Card class="">
+          <h2>Card 1</h2>
+          <p>Card 1 content</p>
         </Card>
       </section>
+    </template>
+    <template #sidebar>
+      <Sidebar>
+        <p>Aside content</p>
+      </Sidebar>
     </template>
     <template #footer>
       <Footer>
@@ -18,9 +24,6 @@
       </Footer>
     </template>
   </Layout>
-  <Button>
-    <span>Click me</span>
-  </Button>
 </template>
 <script setup lang="ts">
 import Header from '@/components/shared/Header.vue';
@@ -28,4 +31,5 @@ import Footer from '@/components/shared/Footer.vue';
 import Layout from '@/components/layout/Layout.vue';
 import Card from '@/components/shared/Card.vue';
 import Button from '@/components/shared/Button.vue';
+import Sidebar from '@/components/shared/Sidebar.vue';
 </script>
